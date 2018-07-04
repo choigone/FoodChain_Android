@@ -1,0 +1,4 @@
+#Wed Jul 04 00:42:05 KST 2018
+base.0=C\:\\Users\\LeeSeungMin\\Downloads\\FoodChain_Android-dev\\FoodChain_Android-dev\\FoodChain\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
