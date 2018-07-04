@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.2dp"
+        android:background="#BDEB64">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="우리 동네 설정"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            android:layout_centerInParent="true"
+            />
+
+        <ImageView
+            android:layout_width="18.8dp"
+            android:layout_height="19.17dp"
+            android:src="@drawable/pic1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="316.65dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="19.2dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#707070"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68.3dp">
+
+        <TextView
+            android:layout_marginLeft="15.31dp"
+            android:layout_marginTop="11.5dp"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dfdf"
+
+            />
+
+        <TextView
+
+            android:textSize="14dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="15.31dp"
+            android:layout_marginTop="39.25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dfdf"
+
+            />
+
+        <ImageButton
+            android:layout_marginLeft="337.5dp"
+            android:layout_width="12.45dp"
+            android:layout_height="20.1dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/pic1"/>
+
+
+    </RelativeLayout>
+
+    //여백다시
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#707070"/>
+
+    <RelativeLayout
+
+        android:layout_marginTop="35.21dp"
+        android:layout_width="match_parent"
+        android:layout_height="303.65dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pic1"/>
+    </RelativeLayout>
+</LinearLayout>

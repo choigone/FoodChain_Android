@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#2E8B57"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    //글꼴적용
+    <TextView
+        android:layout_marginTop="176.65dp"
+        android:layout_width="250dp"
+        android:gravity="center_horizontal"
+        android:layout_height="85dp"
+        android:textColor="#ffffff"
+        android:text="FOOD CHAIN"
+        android:textSize="71dp"
+
+        />
+
+</LinearLayout>

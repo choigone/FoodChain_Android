@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#BDEB64">
+
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="17dp"
+                android:layout_centerInParent="true"
+                android:text="장바구니"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="24.2dp"
+            android:layout_marginTop="13.4dp">
+
+            <ImageView
+                android:id="@+id/basket_checked_iv"
+                android:layout_width="24.2dp"
+                android:layout_height="24.2dp"
+                android:layout_marginLeft="15.3dp" />
+
+            <RelativeLayout
+                android:id="@+id/basket_all_rl"
+                android:layout_width="75.9dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/basket_checked_iv">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:text="전체선택"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/basket_bar_v"
+                android:layout_width="1dp"
+                android:layout_height="23dp"
+                android:layout_toRightOf="@+id/basket_all_rl"
+                android:background="#707070" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/basket_bar_v"
+                android:textColor="#000000"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="22.7dp">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/basketb" />
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buyb" />
+
+    </LinearLayout>
+</RelativeLayout>

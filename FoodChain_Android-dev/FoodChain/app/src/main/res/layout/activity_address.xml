@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="우리 동네 찾기"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:layout_marginBottom="3dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40.32dp">
+        
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="8.65dp"
+            android:src="@drawable/searh_icon"
+            />
+        
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:hint="동명(읍,면)으로 검색"
+            android:textColorHint="#BDEB64"
+            android:textSize="15dp"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="55dp"/>
+
+
+        //invisible 주기
+        <ImageView
+            android:layout_width="13.44dp"
+            android:layout_height="13.44dp"
+            android:layout_marginTop="10.56dp"
+            android:src="@drawable/erase"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+    </RelativeLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/address_frame">
+
+    </FrameLayout>
+
+</LinearLayout>

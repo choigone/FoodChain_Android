@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#BDEB64">
+        
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="18dp"
+            android:layout_centerInParent="true"
+            android:text="상품등록"
+            android:textSize="14dp"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    //background color
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="10.5dp"
+
+        >
+        
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="103dp"
+            android:layout_centerVertical="true"/>
+
+        //콤보박스인가요???
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="13.5dp"
+        android:layout_marginRight="13.5dp">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38.5dp"
+            android:background="#EFF1F3">
+            
+            <ImageView
+                android:id="@+id/register_calander_iv"
+                android:layout_width="15.4dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+
+            //datepickerdialog사용
+            <TextView
+                android:layout_width="56dp"
+                android:layout_height="15dp"
+                android:textSize="11dp"
+                android:textColor="#000000"
+                android:layout_toRightOf="@+id/register_calander_iv"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.5dp"
+                />
+
+        </RelativeLayout>
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:background="#EFF1F3"
+            android:layout_alignParentBottom="true">
+
+        </EditText>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35.5dp"
+        android:layout_marginTop="15dp">
+
+        <ImageButton
+            android:layout_width="182dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/save"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
