@@ -39,9 +39,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val strUser = userText!!.text.toString()
         val strPw = pwText!!.text.toString()
 
-
         if(strUser != null && strPw!=null){
-            login_login_btn.isSelected = true
+          //  login_login_btn.isSelected = true
         }
 
     }

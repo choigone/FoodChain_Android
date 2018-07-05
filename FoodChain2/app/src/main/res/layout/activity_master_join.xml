@@ -145,12 +145,25 @@
                     android:layout_marginBottom="35dp"
                     android:background="#2E8B57" />
 
-                <EditText
-                    android:layout_width="315dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:background="@android:color/transparent"
-                    android:hint="사업장 주소"
-                    android:textSize="11dp" />
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="사업장 주소"
+                        android:textSize="11dp" />
+                    
+                    <ImageButton
+                        android:layout_width="78.72dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/address"/>
+                </LinearLayout>
+                
 
                 <View
                     android:layout_width="match_parent"
