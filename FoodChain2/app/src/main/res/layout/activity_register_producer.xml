@@ -106,7 +106,6 @@
         <ImageButton
             android:layout_width="182dp"
             android:layout_height="match_parent"
-            android:background="@drawable/save"
             android:layout_centerHorizontal="true"
             />
 

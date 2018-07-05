@@ -14,8 +14,7 @@
         <ImageView
             android:id="@+id/home_recommendpicture"
             android:layout_width="match_parent"
-            android:layout_height="185dp"
-            android:src="@drawable/pic1" />
+            android:layout_height="185dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"

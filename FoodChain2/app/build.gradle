@@ -44,7 +44,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     // 카카오톡 SDK 추가
 
-    compile group: project.KAKAO_SDK_GROUP, name: 'usermgmt',
-
-            version: project.KAKAO_SDK_VERSION
+    //compile group: project.KAKAO_SDK_GROUP,
+    //        name: 'usermgmt',
+     //       version: project.KAKAO_SDK_VERSION
 }

@@ -23,7 +23,6 @@
             android:layout_height="16dp"
             android:layout_marginLeft="23dp"
             android:layout_marginTop="8.65dp"
-            android:src="@drawable/search_icon"
             />
         
         <EditText
@@ -42,7 +41,6 @@
             android:layout_width="13.44dp"
             android:layout_height="13.44dp"
             android:layout_marginTop="10.56dp"
-            android:src="@drawable/erase"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
             />
