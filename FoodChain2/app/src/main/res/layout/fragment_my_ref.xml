@@ -22,7 +22,6 @@
         <ImageView
             android:layout_width="23.15dp"
             android:layout_height="21dp"
-            android:src="@drawable/camera"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="17.5dp"
@@ -47,7 +46,6 @@
             <ImageView
                 android:layout_width="34.5dp"
                 android:layout_height="34.5dp"
-                android:src="@drawable/addcircle"
                 android:layout_marginLeft="8.5dp"
                 android:layout_centerVertical="true"/>
             

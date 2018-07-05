@@ -28,8 +28,7 @@
                 <ImageView
                     android:layout_width="26.25dp"
                     android:layout_height="36.52dp"
-                    android:layout_marginLeft="9dp"
-                    android:src="@drawable/pingray" />
+                    android:layout_marginLeft="9dp" />
 
                 <TextView
                     android:layout_width="56dp"

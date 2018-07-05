@@ -9,61 +9,63 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:id="@+id/signup_title_rl"
+
+        <FrameLayout
+            android:id="@+id/main_frame"
             android:layout_width="match_parent"
-            android:layout_height="65.3dp">
-
-            <ImageView
-                android:layout_width="54dp"
-                android:layout_height="19dp"
-                android:layout_centerInParent="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="28dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="62.7dp">
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="34dp">
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="305dp"
-                android:layout_height="45dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/join_box">
-
-            </ImageView>
-
-
-        </RelativeLayout>
-
-
+            android:layout_height="536dp"></FrameLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/main_tab"
+        android:background="#faf9fa"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+
+            //이미지 없음
+            <ImageView
+                android:id="@+id/page_store_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+
+                />
+
+            <ImageView
+                android:id="@+id/page_ref_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/page_alarm_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/page_setting_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="회원가입"
+            android:gravity="center"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170.72dp">
+
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="18dp"
+            android:text="회원가입을 환영합니다"
+            android:textAlignment="center"
+            android:textColor="#2E8B57"
+            android:textSize="16dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="133dp"
+                android:layout_centerHorizontal="true"
+                android:background="#2E8B57"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="102dp"
+                android:layout_height="133dp"
+                android:layout_centerHorizontal="true"
+                android:background="#2E8B57"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="94dp"
+                android:layout_height="32dp"
+                android:text="임박 상품이
+기다리고 있어요!"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="94dp"
+                android:layout_height="32dp"
+                android:text="스토어에 상품을
+팔아보세요!"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="31.28dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/join_user_btn"
+                android:layout_width="112dp"
+                android:layout_height="32dp"
+                android:background="#2E8B57"
+                android:text="일반인 가입"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/join_master_btn"
+                android:layout_width="112dp"
+                android:layout_height="32dp"
+                android:background="#2E8B57"
+                android:text="사장님 가입"
+                android:textColor="#FFFFFF"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
