@@ -10,7 +10,7 @@
         //상단바 없애기!
         <item name="windowNoTitle">true</item>
         //상태바 배경
-        <item name="android:statusBarColor"/>
+        <item name="android:statusBarColor">#FFFFFF</item>
     </style>
 
 </resources>

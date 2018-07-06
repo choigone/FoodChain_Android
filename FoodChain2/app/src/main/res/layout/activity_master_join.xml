@@ -136,7 +136,7 @@
                     android:layout_width="315dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"
-                    android:hint="전화번호"
+                    android:hint="점포명"
                     android:textSize="11dp" />
 
                 <View
