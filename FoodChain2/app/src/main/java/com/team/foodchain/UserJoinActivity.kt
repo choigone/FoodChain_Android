@@ -23,5 +23,7 @@ class UserJoinActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_join)
         user_join_btn.setOnClickListener(this)
+
+
     }
 }

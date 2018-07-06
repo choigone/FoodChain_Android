@@ -46,6 +46,17 @@
             />
     </RelativeLayout>
     
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="31.28dp">
+        <ImageButton
+            android:layout_width="312dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/now"/>
+        
+    </RelativeLayout>
+    
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
