@@ -1,9 +1,12 @@
 package com.team.foodchain
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.team.foodchain.R.id.*
 import kotlinx.android.synthetic.main.activity_page.*
 
 class HomeActivity : AppCompatActivity(), View.OnClickListener {
@@ -40,6 +43,29 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         page_ref_btn.setOnClickListener(this)
         page_alarm_btn.setOnClickListener(this)
         page_setting_btn.setOnClickListener(this)
+
+        if(isFirst == 1){
+            val builder = AlertDialog.Builder(this@HomeActivity)
+
+            builder.setMessage("가입하고 우리 동네 상품을 찾아보세요! " +
+                    "우리 동네를 설정하고 시작하세요!")
+            builder.setPositiveButton("우리 동네 설정하고 시작하기") { dialog, which ->
+                setContentView(R.layout.activity_address)
+//            root_layout.setBackgroundColor(Color.TRANSPARENT)
+            }
+
+            builder.setNeutralButton("둘러보기") { dialog, which ->
+                setContentView(R.layout.activity_basket)
+//            root_layout.setBackgroundColor(Color.TRANSPARENT)
+            }
+
+            val dialog: AlertDialog = builder.create()
+
+            dialog.show()
+
+        }
+
+
     }
 
     fun addFragment(fragment : Fragment){
