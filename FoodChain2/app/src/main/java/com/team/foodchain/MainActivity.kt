@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             login_login_btn -> {
+                isFirst = 0
                 val intent = Intent(applicationContext, HomeActivity::class.java)
                 startActivity(intent)
             }

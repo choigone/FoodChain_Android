@@ -7,7 +7,11 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_choice.*
 
+var isFirst = 0
+
 class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
+
+
     override fun onClick(v: View?) {
         when(v){
             choice_confirm_tv -> {
@@ -21,5 +25,6 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choice)
         choice_confirm_tv.setOnClickListener(this)
+        isFirst = 1
     }
 }
