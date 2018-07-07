@@ -157,11 +157,20 @@
                         android:background="@android:color/transparent"
                         android:hint="사업장 주소"
                         android:textSize="11dp" />
-                    
-                    <ImageButton
-                        android:layout_width="78.72dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/address"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="78.72dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/address"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"/>
+
+                    </RelativeLayout>
+
                 </LinearLayout>
                 
 
@@ -172,6 +181,11 @@
                     android:background="#2E8B57" />
 
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
                 <CheckBox
                     android:id="@+id/checkBox"
                     android:layout_width="wrap_content"
@@ -179,7 +193,8 @@
                     android:text="약관동의"
                     android:textColor="#2e8b57 "
                     android:textSize="11sp"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    />
 
 
             </LinearLayout>
