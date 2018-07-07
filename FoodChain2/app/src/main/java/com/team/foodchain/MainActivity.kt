@@ -16,8 +16,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import org.w3c.dom.Text
 
-//id password null값이면 활성화 되도록 짰는데 계속 활성화 됨....ㅅㅂ
-
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     var userText: EditText? = null
