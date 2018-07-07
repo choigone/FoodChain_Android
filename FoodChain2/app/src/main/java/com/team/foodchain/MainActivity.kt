@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         login_login_btn.setOnClickListener(this)
 
         login_login_btn.isSelected = false
+        login_login_btn.isClickable = false
 
         userText = findViewById(R.id.login_id) as EditText
         pwText = findViewById(R.id.login_pwd) as EditText
@@ -54,18 +55,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         }
                         override fun onTextChanged(s2: CharSequence?, start: Int, before: Int, count: Int) {
                             login_login_btn.isSelected = false
+                            login_login_btn.isClickable = false
                             if (!s2!!.isEmpty()) {
                                 login_login_btn.isSelected = true
+                                login_login_btn.isClickable = true
                                 if (s1.isEmpty()) {
                                     login_login_btn.isSelected = false
+                                    login_login_btn.isClickable = false
                                 }
                             } else {
                                 login_login_btn.isSelected = false
+                                login_login_btn.isClickable = false
                             }
                         }
                     })
                 } else {
                     login_login_btn.isSelected = false
+                    login_login_btn.isClickable = false
                 }
             }
         })
