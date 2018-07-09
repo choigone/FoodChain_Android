@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="사장님 회원가입"
+            android:text="소비자 회원가입"
             android:textColor="#000000"
             android:textSize="12dp"
             android:textStyle="bold" />
@@ -35,6 +35,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/user_join_name"
                 android:layout_width="315dp"
                 android:layout_height="30dp"
                 android:background="@android:color/transparent"
@@ -52,6 +53,7 @@
                 android:layout_height="30dp">
 
                 <EditText
+                    android:id="@+id/user_join_email"
                     android:layout_width="300dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"
@@ -82,7 +84,7 @@
                 android:layout_height="30dp">
 
                 <EditText
-                    android:id="@+id/user_pw_et"
+                    android:id="@+id/user_join_pw"
                     android:layout_width="315dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"
@@ -102,7 +104,7 @@
                 android:layout_height="30dp">
 
                 <EditText
-                    android:id="@+id/user_pwcheck_et"
+                    android:id="@+id/user_join_pwcheck"
                     android:layout_width="300dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"
@@ -130,6 +132,7 @@
                 android:background="#2E8B57" />
 
             <EditText
+                android:id="@+id/user_join_phone"
                 android:layout_width="315dp"
                 android:layout_height="30dp"
                 android:background="@android:color/transparent"
@@ -169,6 +172,7 @@
             android:layout_width="match_parent"
             android:layout_height="43.84dp"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
             android:background="#2E8B57"
             android:text="가입하기"
             android:textColor="#FFFFFF" />
