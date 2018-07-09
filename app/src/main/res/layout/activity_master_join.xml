@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.08dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="사장님 회원가입"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="18dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="460dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:hint="대표자명"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="31dp"
+                    android:background="#2E8B57" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="이메일"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="31dp"
+                    android:background="#2E8B57" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <EditText
+                        android:layout_width="300dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="비밀번호"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="31dp"
+                    android:background="#2E8B57" />
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:hint="비밀번호 재확인"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="31dp"
+                    android:background="#2E8B57" />
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:hint="전화번호"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="#2E8B57" />
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:hint="사업자 등록번호"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="#2E8B57" />
+
+                <EditText
+                    android:layout_width="315dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:hint="점포명"
+                    android:textSize="11dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="#2E8B57" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:layout_width="250dp"
+                        android:layout_height="30dp"
+                        android:background="@android:color/transparent"
+                        android:hint="사업장 주소"
+                        android:textSize="11dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:layout_width="78.72dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/address"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="#2E8B57" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </RelativeLayout>
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="약관동의"
+                    android:textColor="#2e8b57 "
+                    android:textSize="11sp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/master_join_btn"
+            android:layout_width="match_parent"
+            android:layout_height="43.84dp"
+            android:layout_alignParentBottom="true"
+            android:background="#2E8B57"
+            android:text="가입하기"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+</LinearLayout>

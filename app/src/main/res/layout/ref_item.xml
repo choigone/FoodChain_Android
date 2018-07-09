@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="79dp"
+    android:background="#EFF1F3"
+    android:layout_marginBottom="8dp"
+    >
+
+    //애니메이션 넣어야댐
+    <ImageView
+        android:id="@+id/ref_item_iv"
+        android:layout_width="42.3dp"
+        android:layout_height="42.3dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18.25dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="42.3dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ref_item_iv">
+
+        <ImageView
+            android:id="@+id/ref_item_day_iv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/ref_item_day_iv"
+            android:layout_marginLeft="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="13dp"
+            android:textSize="9dp"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="52dp"
+            android:layout_height="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+
+
+    </RelativeLayout>
+    
+
+
+
+
+</RelativeLayout>

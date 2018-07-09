@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/bottombar_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="#BDeb64">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/bottombar_search"
+                android:layout_width="216.95dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="70.85dp"
+                android:layout_marginTop="6.72dp"
+                android:background="#ffffff"
+                android:iconifiedByDefault="true"></SearchView>
+
+            <ImageView
+                android:id="@+id/bottombar_heart"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="11.88dp"
+                android:layout_marginTop="13.44dp" />
+
+            <ImageView
+                android:id="@+id/bottombar_basket"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="9.48dp"
+                android:layout_marginTop="12.48dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="6.96dp"
+            android:layout_marginTop="16.29dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="16dp"
+                android:id="@+id/tophome"
+                android:text="홈"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="16dp"
+                android:id="@+id/topsale"
+                android:text="타임세일"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/market"
+                android:layout_width="120dp"
+                android:layout_height="16dp"
+                android:text="주변마켓"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="120dp"
+                android:id="@+id/view1"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="120dp"
+                android:id="@+id/view2"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="120dp"
+                android:id="@+id/view3"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
