@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FFFFFF">
+
+        <ImageButton
+            android:layout_width="23dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/camera"/>
+
+        <TextView
+            android:layout_width="77dp"
+            android:layout_height="19dp"
+            android:letterSpacing="-0.7"
+            android:text="나의 냉장고"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textAlignment="textStart"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/kopub_dotum_pro_medium"
+            />
+        <TextView
+            android:layout_width="21dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:text="편집"
+            android:textColor="#2E8B57"
+            android:textSize="10dp"
+            />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:text="유통기한 관리"
+                 />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
