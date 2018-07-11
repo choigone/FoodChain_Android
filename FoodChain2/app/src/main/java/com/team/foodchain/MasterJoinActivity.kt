@@ -9,16 +9,14 @@ import android.view.View
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_join.*
 import kotlinx.android.synthetic.main.activity_master_join.*
+import kotlinx.android.synthetic.main.activity_user_join.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class MasterJoinActivity : AppCompatActivity(), View.OnClickListener {
-    override fun onClick(v: View?) {
-        when(v){
-            master_join_btn -> {
-                val intent = Intent(applicationContext, ChoiceActivity::class.java)
-                startActivity(intent)
-            }
-        }
-    }
+class MasterJoinActivity : AppCompatActivity() {
+
+    lateinit var networkService: NetworkService
 
     var pwText : EditText? = null
     var pwCheckText : EditText? = null
@@ -26,7 +24,7 @@ class MasterJoinActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_master_join)
-        master_join_btn.setOnClickListener(this)
+        networkService = ApplicationController.instance.networkSerVice
 
         pwText = findViewById(R.id.master_pw_et) as EditText
         pwCheckText = findViewById(R.id.master_pwcheck_et) as EditText
@@ -59,6 +57,35 @@ class MasterJoinActivity : AppCompatActivity(), View.OnClickListener {
                 })
             }
 
+        })
+
+        master_join_btn.setOnClickListener{
+            postMasterSignup()
+        }
+    }
+
+    fun postMasterSignup(){
+        val user_pw_check =  user_join_pwcheck.text.toString()
+        val user_pw = user_join_pw.text.toString()
+        val user_name = user_join_name.text.toString()
+        val user_email = user_join_email.text.toString()
+        val user_phone = user_join_phone.text.toString()
+        val user_id : String? = null
+
+        val postSignupGeneral = PostSignupGeneral(user_pw_check, user_pw, user_name, user_email, user_phone, user_id)
+
+        val postSignupGeneralResponse = networkService.postSignGeneral(postSignupGeneral)
+        postSignupGeneralResponse.enqueue(object : Callback<PostSignupGeneralResponse> {
+            override fun onFailure(call: Call<PostSignupGeneralResponse>?, t: Throwable?) {
+
+            }
+
+            override fun onResponse(call: Call<PostSignupGeneralResponse>?, response: Response<PostSignupGeneralResponse>?) {
+                if(response!!.isSuccessful){
+                    val intent = Intent(applicationContext, ChoiceActivity::class.java)
+                    startActivity(intent)
+                }
+            }
         })
     }
 }

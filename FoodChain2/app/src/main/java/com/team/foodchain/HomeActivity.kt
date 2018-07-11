@@ -40,6 +40,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_page)
         addFragment(StoreTab())
         page_store_btn.isSelected = true
+        page_store_btn.setOnClickListener(this)
         page_ref_btn.setOnClickListener(this)
         page_alarm_btn.setOnClickListener(this)
         page_setting_btn.setOnClickListener(this)

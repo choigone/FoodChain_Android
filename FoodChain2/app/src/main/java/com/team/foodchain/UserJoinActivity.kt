@@ -73,12 +73,6 @@ class UserJoinActivity : AppCompatActivity() {
     }
 
     fun postUserSignup(){
-//        val user_pw_check = RequestBody.create(MediaType.parse("text/plain"), user_join_pwcheck.text.toString())
-//        val user_pw = RequestBody.create(MediaType.parse("text/plain"), user_join_pw.text.toString())
-//        val user_name = RequestBody.create(MediaType.parse("text/plain"), user_join_name.text.toString())
-//        val user_email = RequestBody.create(MediaType.parse("text/plain"), user_join_email.text.toString())
-//        val user_phone = RequestBody.create(MediaType.parse("text/plain"), user_join_phone.text.toString())
-
         val user_pw_check =  user_join_pwcheck.text.toString()
         val user_pw = user_join_pw.text.toString()
         val user_name = user_join_name.text.toString()
@@ -87,7 +81,6 @@ class UserJoinActivity : AppCompatActivity() {
         val user_id : String? = null
 
         val postSignupGeneral = PostSignupGeneral(user_pw_check, user_pw, user_name, user_email, user_phone, user_id)
-
 
         val postSignupGeneralResponse = networkService.postSignGeneral(postSignupGeneral)
         postSignupGeneralResponse.enqueue(object : Callback<PostSignupGeneralResponse>{
