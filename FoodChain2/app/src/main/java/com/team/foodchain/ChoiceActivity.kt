@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_choice.*
 import kotlinx.android.synthetic.main.activity_page.*
@@ -14,9 +15,10 @@ import retrofit2.Response
 
 var isFirst = 0
 
+
 class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var pro_cate : Array<String>
+    lateinit var pro_cate : ArrayList<String>
     var flag = 0
 
 
@@ -24,123 +26,99 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         when(v){
             category0_a-> {
                 category0_a.isSelected = true
-                pro_cate[flag] = "0_a"
-                flag++
+                pro_cate.add("0_a")
             }
             category0_b -> {
                 category0_a.isSelected = true
-                pro_cate[flag] = "0_b"
-                flag++
+                pro_cate.add("0_b")
             }
             category1_a -> {
                 category1_a.isSelected = true
-                pro_cate[flag] = "1_a"
-                flag++
+                pro_cate.add("1_a")
             }
             category1_b -> {
                 category1_b.isSelected = true
-                pro_cate[flag] = "1_b"
-                flag++
+                pro_cate.add("1_b")
             }
             category1_c -> {
                 category1_c.isSelected = true
-                pro_cate[flag] = "1_c"
-                flag++
+                pro_cate.add("1_c")
             }
             category1_d -> {
                 category1_d.isSelected = true
-                pro_cate[flag] = "1_d"
-                flag++
+                pro_cate.add("1_d")
             }
             category1_e -> {
                 category1_e.isSelected = true
-                pro_cate[flag] = "1_e"
-                flag++
+                pro_cate.add("1_e")
             }
             category2 -> {
                 category2.isSelected = true
-                pro_cate[flag] = "2"
-                flag++
+                pro_cate.add("2")
             }
             category3_a -> {
                 category3_a.isSelected = true
-                pro_cate[flag] = "3_a"
-                flag++
+                pro_cate.add("3_a")
             }
             category3_b -> {
                 category3_b.isSelected = true
-                pro_cate[flag] = "3_b"
-                flag++
+                pro_cate.add("3_b")
             }
             category3_c -> {
                 category3_c.isSelected = true
-                pro_cate[flag] = "3_c"
-                flag++
-            }
+                pro_cate.add("3_c")
+                }
             category3_d -> {
                 category3_d.isSelected = true
-                pro_cate[flag] = "3_d"
-                flag++
-            }
+                pro_cate.add("3_d")
+                }
             category3_e ->{
                 category3_e.isSelected = true
-                pro_cate[flag] = "3_e"
-                flag++
+                pro_cate.add("3_e")
             }
             category4 -> {
                 category4.isSelected = true
-                pro_cate[flag] = "4"
-                flag++
+                pro_cate.add("4")
             }
             category5_a -> {
                 category5_a.isSelected = true
-                pro_cate[flag] = "5_a"
-                flag++
+                pro_cate.add("5_a")
             }
             category5_b -> {
                 category5_b.isSelected = true
-                pro_cate[flag] = "5_b"
-                flag++
+                pro_cate.add("5_b")
             }
             category6_a -> {
                 category6_a.isSelected = true
-                pro_cate[flag] = "6_a"
-                flag++
+                pro_cate.add("6_a")
             }
             category6_b -> {
                 category6_b.isSelected = true
-                pro_cate[flag] = "6_b"
-                flag++
+                pro_cate.add("6_b")
             }
             category6_c -> {
                 category6_c.isSelected = true
-                pro_cate[flag] = "6_c"
-                flag++
+                pro_cate.add("6_c")
             }
             category6_d -> {
                 category6_d.isSelected = true
-                pro_cate[flag] = "6_d"
-                flag++
+                pro_cate.add("6_d")
             }
             category6_e -> {
                 category6_e.isSelected = true
-                pro_cate[flag] = "6_e"
-                flag++
+                pro_cate.add("6_e")
             }
             category6_f -> {
                 category6_f.isSelected = true
-                pro_cate[flag] = "6_f"
-                flag++
+                pro_cate.add("6_f")
             }
             category7_a -> {
                 category7_a.isSelected = true
-                pro_cate[flag] = "7_a"
-                flag++
+                pro_cate.add("7_a")
             }
             category7_b ->{
                 category7_b.isSelected = true
-                pro_cate[flag] = "7_b"
-                flag++
+                pro_cate.add("7_b")
             }
 
         }
@@ -151,6 +129,7 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choice)
+        pro_cate = ArrayList<String>()
         category0_a.setOnClickListener(this)
         category0_b.setOnClickListener(this)
         category1_a.setOnClickListener(this)
@@ -179,20 +158,21 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         isFirst = 1
         networkService = ApplicationController.instance.networkSerVice
 
+
         choice_confirm_tv.setOnClickListener{
             postChoice(pro_cate)
         }
     }
 
-    fun postChoice(pro_cate : Array<String>){
+    fun postChoice(pro_cate : ArrayList<String>){
 
         val postChoice = PostChoice(pro_cate)
 
 
-        val postChoiceResponse = networkService.postChoice("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxlZXNkNTU2QGdtYWlsLmNvbSIsInBob25lIjoiMDEwMjExMjE4OTEiLCJpZGVudGlmeSI6IjAiLCJpYXQiOjE1MzA4MjA0NTF9.GzfkSKwWsAybAm5FMgkJHmkQY6ZpP1368NnAVQIQOks",postChoice)
+        val postChoiceResponse = networkService.postChoice("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImdvZXVuQGdtYWlsLmNvbSIsInB3IjoiK1JkYTJlK2FTcE9kK1Aya0t0L2h6aDl2V1JLRm0vb0g3bll2UkhRbjVmND0iLCJpZGVudGlmeSI6MCwiaWF0IjoxNTMxMzA0NjYzfQ.IieKd7HDJJGEMuLHKDdyZ-PwilWlzq58iNX8mkDbNAo",postChoice)
         postChoiceResponse.enqueue(object : Callback<PostChoiceResponse> {
             override fun onFailure(call: Call<PostChoiceResponse>?, t: Throwable?) {
-
+                Log.v("text", t.toString())
             }
 
             override fun onResponse(call: Call<PostChoiceResponse>?, response: Response<PostChoiceResponse>?) {

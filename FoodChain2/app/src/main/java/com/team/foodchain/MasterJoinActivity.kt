@@ -60,7 +60,7 @@ class MasterJoinActivity : AppCompatActivity() {
         })
 
         master_join_btn.setOnClickListener{
-
+            postMasterSignup()
         }
     }
 

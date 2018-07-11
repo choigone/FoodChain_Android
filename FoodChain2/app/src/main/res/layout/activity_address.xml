@@ -31,8 +31,8 @@
 
         <EditText
             android:id="@+id/dong"
-            android:layout_width="63dp"
-            android:layout_height="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
             android:layout_marginLeft="55dp"
             android:layout_marginRight="199dp"
             android:layout_marginTop="5dp"
