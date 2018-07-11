@@ -21,7 +21,6 @@
         <TextView
             android:layout_width="77dp"
             android:layout_height="19dp"
-            android:letterSpacing="-0.7"
             android:text="나의 냉장고"
             android:textColor="#000000"
             android:textSize="16dp"
@@ -59,12 +58,18 @@
             android:elevation="2dp">
             
             <RelativeLayout
-                android:id="@+id/user_ref_add_iv"
+                android:id="@+id/user_ref_add"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:background="#F5F5F5">
+                >
+
+                <View
+                    android:id="@+id/user_ref_add_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#F5F5F5"/>
                 
                 <ImageView
                     android:layout_width="25dp"
@@ -74,14 +79,8 @@
 
             </RelativeLayout>
             
-            <ImageView
-                android:layout_width="34.5dp"
-                android:layout_height="34.5dp"
-                android:layout_marginLeft="8.5dp"
-                android:layout_centerVertical="true"/>
-            
             <LinearLayout
-                android:layout_toRightOf="@+id/user_ref_add_iv"
+                android:layout_toRightOf="@+id/user_ref_add"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="30dp"

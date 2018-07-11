@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class Address2 : Fragment() {
+class Map : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val v = inflater!!.inflate(R.layout.frame_address2, container, false)
+        val v = inflater!!.inflate(R.layout.fragment_map, container, false)
         return v
     }
 }

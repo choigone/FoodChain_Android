@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <ImageView
-        android:layout_width="86.4dp"
-        android:layout_height="86.4dp"
-        android:layout_marginTop="252dp"
-        android:layout_centerHorizontal="true"/>
-    
-    <TextView
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:text="우리 동네 위치를 받아오지 못했습니다.
-        주소를 검색해 보세요!"
-        android:textAlignment="center"
-        android:textSize="15dp"
-        android:textColor="#2B2B2B"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="359dp"
-        />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</RelativeLayout>
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="68dp"
+        android:text="도로명 + 건물번호
+지역명(동/리) + 번지
+지역명(동/리) + 건물명(아파트명)"
+        android:textSize="12dp"
+        android:textColor="#DCDCDC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="52dp"
+        android:lineSpacingExtra="7dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/test"/>
+
+</LinearLayout>
