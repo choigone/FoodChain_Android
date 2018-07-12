@@ -1,17 +1,14 @@
 package com.team.foodchain
 
 import okhttp3.Call
-import retrofit2.http.Body
-import retrofit2.http.Header
-import retrofit2.http.Multipart
-import retrofit2.http.POST
+import retrofit2.http.*
 
 
 interface NetworkService2 {
 
-    @POST("/addrlink/addrLinkApi.do")
+    @GET("/addrlink/addrLinkApi.do")
     fun postSearchLocation(
-            @Body postSearchLocation: PostSearchLocation
+            @QueryMap map: HashMap<String, String>
     ) : retrofit2.Call<PostSearchLocationResponse>
 
 }

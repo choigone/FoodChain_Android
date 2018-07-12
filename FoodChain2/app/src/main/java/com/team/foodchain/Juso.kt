@@ -1,6 +1,6 @@
 package com.team.foodchain
 
-data class Juso(
+data class juso(
         var roadAddr : String,
         var roadAddrPart1 : String,
         var roadAddrPart2 : String?,
@@ -17,12 +17,12 @@ data class Juso(
         var sggNm : String,
         var emdNm : String,
         var liNm : String?,
-        var m : String,
+        var rn : String,
         var udrtYn : String,
-        var buldMnnm : Number,
-        var buldSlno : Number,
+        var buldMnnm : String,
+        var buldSlno : String,
         var mtYn : String,
-        var lnbrMnnm : Number,
-        var lnbrSlno : Number,
+        var lnbrMnnm : String,
+        var lnbrSlno : String,
         var emdNo : String
 )
