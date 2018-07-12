@@ -6,17 +6,20 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ApplicationController : Application() {
     lateinit var networkSerVice : NetworkService
+
     private val baseUrl = "https://www.eatda.cf"
+
+
     companion object{
         lateinit var instance : ApplicationController
         //일종의 스태틱
     }
 
-
     override fun onCreate() {
         super.onCreate()
         instance = this
         buildNetwork()
+
     }
 
     fun buildNetwork(){

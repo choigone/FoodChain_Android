@@ -30,20 +30,18 @@
             android:src="@drawable/search_icon" />
 
         <EditText
-            android:id="@+id/dong"
-            android:layout_width="wrap_content"
+            android:id="@+id/address_search_keyword"
+            android:layout_width="200dp"
             android:layout_height="16dp"
-            android:layout_marginLeft="55dp"
-            android:layout_marginRight="199dp"
             android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/searchIcon"
             android:background="@android:color/transparent"
             android:hint="예) 성북동"
             android:textColorHint="#DCDCDC"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            />
 
 
-        //invisible 주기
-        //이미지 없음
 
         <ImageView
             android:id="@+id/address_location_btn"

@@ -29,7 +29,7 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBwysSNTDdHO68Vlu1k3iIYC3XJan3glJI" />
-        <activity android:name=".ChoiceActivity">
+        <activity android:name=".AddressActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,9 +40,9 @@
         <activity android:name=".JoinActivity"></activity>
         <activity android:name=".UserJoinActivity"></activity>
         <activity android:name=".MasterJoinActivity"></activity>
-        <!--<activity android:name=".ChoiceActivity"></activity>-->
+        <activity android:name=".ChoiceActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".AddressActivity"></activity>
+        <!--<activity android:name=".AddressActivity"></activity>-->
         <activity android:name=".AddressActivity2"></activity>
 
         <!--<provider-->

@@ -13,20 +13,24 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-var isFirst = 0
-
 
 class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var pro_cate : ArrayList<String>
-    var flag = 0
-
+    var flag=0
+    lateinit var flag_category : Array<Int>
 
     override fun onClick(v: View?) {
         when(v){
             category0_a-> {
-                category0_a.isSelected = true
-                pro_cate.add("0_a")
+                if(category0_a.isSelected==true){
+                    category0_a.isSelected = false
+                    pro_cate
+                }
+                else if(category0_a.isSelected ==false){
+                    category0_a.isSelected = true
+                    pro_cate.add("0_a")
+                }
             }
             category0_b -> {
                 category0_a.isSelected = true
@@ -155,7 +159,6 @@ class ChoiceActivity : AppCompatActivity(), View.OnClickListener {
         category7_a.setOnClickListener(this)
         category7_b.setOnClickListener(this)
 
-        isFirst = 1
         networkService = ApplicationController.instance.networkSerVice
 
 

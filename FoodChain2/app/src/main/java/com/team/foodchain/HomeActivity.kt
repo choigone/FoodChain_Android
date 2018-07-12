@@ -45,7 +45,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         page_alarm_btn.setOnClickListener(this)
         page_setting_btn.setOnClickListener(this)
 
-        if(isFirst == 1){
+
             val builder = AlertDialog.Builder(this@HomeActivity)
 
             builder.setMessage("가입하고 우리 동네 상품을 찾아보세요! " +
@@ -64,7 +64,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
 
             dialog.show()
 
-        }
+
 
 
     }
