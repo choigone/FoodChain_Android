@@ -38,6 +38,8 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
+import kotlin.collections.Map
 
 
 class AddressActivity : AppCompatActivity(), View.OnClickListener{
@@ -67,13 +69,13 @@ class AddressActivity : AppCompatActivity(), View.OnClickListener{
         setContentView(R.layout.activity_address)
         addFragment(Address1())
         lateinit var networkService2 : NetworkService2
-        val retrofit = Retrofit.Builder()
-                .baseUrl("http://www.juso.go.kr")
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-//        val builder = Retrofit.Builder()
-//        val retrofit = builder.baseUrl("http://www.juso.go.kr").addConverterFactory(GsonConverterFactory.create()).build()
+//        val retrofit = Retrofit.Builder()
+//                .baseUrl("http://www.juso.go.kr")
+//                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build()
+        val builder = Retrofit.Builder()
+        val retrofit = builder.baseUrl("http://www.juso.go.kr").addConverterFactory(GsonConverterFactory.create()).build()
         networkService2 = retrofit.create((NetworkService2::class.java))
 
 //        keyword = findViewById(R.id.address_search_keyword) as EditText
@@ -133,17 +135,23 @@ class AddressActivity : AppCompatActivity(), View.OnClickListener{
     fun postSearchLocation(networkService2 : NetworkService2){
 
         val address_search_keyword =  address_search_keyword.text.toString()
-        val postSearchLocation = PostSearchLocation("U01TX0FVVEgyMDE4MDcxMTE3MzkxODEwODAwMzE=",1, 100, address_search_keyword, "json" )
-
-        val postSearchLocationResponse = networkService2.postSearchLocation(postSearchLocation)
+//        val postSearchLocation = PostSearchLocation("U01TX0FVVEgyMDE4MDcxMTE3MzkxODEwODAwMzE=",1, 100, address_search_keyword, "json" )
+        val map = HashMap<String, String>()
+        map.put("confmKey", "U01TX0FVVEgyMDE4MDcxMTE3MzkxODEwODAwMzE=")
+        map.put("currentPage", "1")
+        map.put("countPerPage", "100")
+        map.put("keyword", address_search_keyword)
+        map.put("resultType", "json")
+        val postSearchLocationResponse = networkService2.postSearchLocation(map)
         postSearchLocationResponse.enqueue(object : Callback<PostSearchLocationResponse> {
             override fun onFailure(call: Call<PostSearchLocationResponse>?, t: Throwable?) {
+                Log.e("failMessage",call.toString())
                 Log.e("failMessage",t.toString())
             }
 
             override fun onResponse(call: Call<PostSearchLocationResponse>?, response: Response<PostSearchLocationResponse>?) {
                 if(response!!.isSuccessful){
-                    Log.e("Success!","제발요!")
+                    Log.e("Success!",response.body().toString())
                 }
             }
 
