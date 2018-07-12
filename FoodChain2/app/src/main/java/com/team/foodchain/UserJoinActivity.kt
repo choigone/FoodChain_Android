@@ -6,8 +6,10 @@ import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.widget.EditText
+import com.team.foodchain.R.id.user_join_phone
 import kotlinx.android.synthetic.main.activity_join.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_master_join.*
@@ -33,6 +35,9 @@ class UserJoinActivity : AppCompatActivity() {
 
     var pwText : EditText? =null
     var pwCheckText : EditText? = null
+
+    var emailCheck : EditText? = null
+    var phoneCheck : EditText? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +70,51 @@ class UserJoinActivity : AppCompatActivity() {
             }
         })
 
+        emailCheck = findViewById(R.id.user_join_email) as EditText
+        emailCheck!!.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val postEmailCheck = PostEmailCheck(s!!.toString())
+
+                val postEmailCheckResponse = networkService.postEmailCheck(postEmailCheck)
+                postEmailCheckResponse.enqueue(object : Callback<PostEmailCheckResponse>{
+                    override fun onFailure(call: Call<PostEmailCheckResponse>?, t: Throwable?) {
+                        user_join_email_check.isSelected = false
+                    }
+                    override fun onResponse(call: Call<PostEmailCheckResponse>?, response: Response<PostEmailCheckResponse>?) {
+                        if(response!!.isSuccessful){
+                            user_join_email_check.isSelected = true
+                        }
+                    }
+                })
+            }
+        })
+
+        phoneCheck = findViewById(R.id.user_join_phone) as EditText
+        phoneCheck!!.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val postPhoneCheck = PostPhoneCheck(s!!.toString())
+
+                val postPhoneCheckResponse = networkService.postPhoneCheck(postPhoneCheck)
+                postPhoneCheckResponse.enqueue(object : Callback<PostPhoneCheckResponse>{
+                    override fun onFailure(call: Call<PostPhoneCheckResponse>?, t: Throwable?) {
+                        user_phone_check.isSelected = false
+                    }
+                    override fun onResponse(call: Call<PostPhoneCheckResponse>?, response: Response<PostPhoneCheckResponse>?) {
+                        if(response!!.isSuccessful){
+                            user_phone_check.isSelected = true
+                        }
+                    }
+                })
+            }
+        })
 
 
         user_join_btn.setOnClickListener{

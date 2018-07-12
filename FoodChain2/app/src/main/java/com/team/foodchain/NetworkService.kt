@@ -17,9 +17,21 @@ interface NetworkService {
             @Body postSignupMaster: PostSignupMaster
     ) : retrofit2.Call<PostSignupMasterResponse>
 
+    @POST("/users/signup/check/email")
+    fun postEmailCheck(
+            @Body postEmailCheck: PostEmailCheck
+    ) : retrofit2.Call<PostEmailCheckResponse>
+
+    @POST("/users/signup/check/phone")
+    fun postPhoneCheck(
+            @Body postPhoneCheck: PostPhoneCheck
+    ) : retrofit2.Call<PostPhoneCheckResponse>
+
     @POST("/users/choice/set")
     fun postChoice(
             @Header("token") token : String,
             @Body postChoice : PostChoice
     ) : retrofit2.Call<PostChoiceResponse>
+
+
 }
