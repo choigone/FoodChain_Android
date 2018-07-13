@@ -5,6 +5,6 @@
         android:state_selected="true"
         />
     <item
-        android:drawable="@drawable/alert_x"
+        android:drawable="@drawable/alarm_icon"
         android:state_selected="false"/>
 </selector>
