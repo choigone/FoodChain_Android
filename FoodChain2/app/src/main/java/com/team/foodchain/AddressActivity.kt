@@ -5,10 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Geocoder
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
+import android.location.*
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v4.app.ActivityCompat
@@ -48,6 +45,10 @@ import kotlin.collections.Map
 
 class AddressActivity : AppCompatActivity(){
 
+    object addressActivity{
+
+    }
+
     var ssibal = arrayListOf("dd")
 
 
@@ -70,10 +71,6 @@ class AddressActivity : AppCompatActivity(){
         val retrofit = builder.baseUrl("http://www.juso.go.kr").addConverterFactory(GsonConverterFactory.create()).build()
         networkService2 = retrofit.create((NetworkService2::class.java))
 
-//        address_list.layoutManager = LinearLayoutManager(this)
-
-
-
 //        keyword = findViewById(R.id.address_search_keyword) as EditText
 //        keyword.setImeActionLabel("검색", KeyEvent.KEYCODE_ENTER)
 //        keyword.setOnKeyListener(object : View.OnKeyListener{
@@ -84,16 +81,6 @@ class AddressActivity : AppCompatActivity(){
 //                }
 //                return false
 //            }
-//
-//        })
-//        lateinit var address1 : Address1
-//        var bundle : Bundle? = null
-//        bundle!!.putStringArrayList("addressList",ssibal)
-//        address1.arguments = bundle
-
-//        val intent = Intent(applicationContext, Address2::class.java)
-//        intent.putExtra("AddressData",ssibal)
-//        startActivity(intent)
 
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -116,10 +103,17 @@ class AddressActivity : AppCompatActivity(){
             location = lm.getLastKnownLocation(provider)
             var latitude : String?
             var longitude : String?
+            var latitudeD : Double
+            var longitudeD : Double
             latitude = location.latitude.toString()
             longitude = location.longitude.toString()
+            latitudeD = location.latitude
+            longitudeD = location.longitude
+
+            var address : String = run(latitudeD,longitudeD)
 
             Log.e("text", "위도 : " + latitude + "경도 : " + longitude)
+            Log.e("변환했음",address)
         }
         searchIcon.setOnClickListener{
             val address_search_keyword =  address_search_keyword.text.toString()
@@ -148,6 +142,7 @@ class AddressActivity : AppCompatActivity(){
                         if(savedInstanceState == null){
                             val bundle = Bundle()
                             bundle.putStringArrayList("yes",ssibal)
+                            address_result_keyword.text = "'" + address_search_keyword +"'"+" 검색 결과"
                             replaceFragment(Address2(), bundle, "yes" )
                         }
                         Log.e("제발요ㅠㅠ",ssibal[0])
@@ -155,10 +150,42 @@ class AddressActivity : AppCompatActivity(){
                 }
 
             })
-//            ssibal = postSearchLocation(networkService2, ssibal)
         }
     }
 
+    fun run(address : String) : Address {
+        val geocoder = google.maps.geocoder()
+        val results = geocoder.getFromLocationName(address, 1)
+        val resultAddress = results.get(0)
+        val latLng = LatLng(resultAddress.getLatitude(), resultAddress.getLongitude())
+        return resultAddress
+
+
+    }
+
+    fun run(lat : Double, lon : Double) : String {
+        val geocoder = Geocoder(this@AddressActivity)
+        var addresses : List<Address>? = null
+        var addressText = ""
+        try
+        {
+            addresses = geocoder.getFromLocation(lat,lon, 1)
+            if (addresses != null && addresses.size > 0)
+            {
+                val address = addresses.get(0)
+                addressText = address.getAdminArea() + " " + (if (address.maxAddressLineIndex > 0) address.getAddressLine(0) else address.locality) + " "
+                val txt = address.getSubLocality()
+                if (txt != null)
+                    addressText += txt + " "
+                addressText += address.getThoroughfare() + " " + address.getSubThoroughfare()
+            }
+            return addressText
+        }
+        catch (e:Exception) {
+            e.printStackTrace()
+            return e.toString()
+        }
+    }
 
     fun addFragment(fragment : Fragment){
         val fm = supportFragmentManager

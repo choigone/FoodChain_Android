@@ -75,6 +75,21 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="30dp">
+
+        <TextView
+            android:id="@+id/address_result_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="12dp"
+            android:textColor="#D42A2A"/>
+
+    </RelativeLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

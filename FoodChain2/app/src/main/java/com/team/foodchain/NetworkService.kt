@@ -4,6 +4,7 @@ import okhttp3.Call
 import retrofit2.http.Body
 import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.PUT
 
 interface NetworkService {
 
@@ -33,5 +34,10 @@ interface NetworkService {
             @Body postChoice : PostChoice
     ) : retrofit2.Call<PostChoiceResponse>
 
+    @POST("/users/locate")
+    fun postLocate(
+            @Header("token") token: String,
+            @Body postUserLocate: PostUserLocate
+    ) : retrofit2.Call<PostUserLocateResponse>
 
 }
