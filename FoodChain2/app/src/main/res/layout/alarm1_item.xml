@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#EFF1F3">
-        
+
         <TextView
             android:layout_width="239dp"
             android:layout_height="21dp"

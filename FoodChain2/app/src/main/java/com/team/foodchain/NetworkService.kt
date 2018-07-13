@@ -13,10 +13,16 @@ interface NetworkService {
             @Body postSignupGeneral: PostSignupGeneral
     ) : retrofit2.Call<PostSignupGeneralResponse>
 
-    @POST("/users/signup/supplier")
-    fun postSignMaster(
-            @Body postSignupMaster: PostSignupMaster
-    ) : retrofit2.Call<PostSignupMasterResponse>
+    @POST("/users/signin/native")
+    fun postSignIn(
+            @Body postSigninGeneral : PostSigninGeneral
+    ):retrofit2.Call<PostSigninGeneralResponse>
+
+    @POST("/users/signin/kakao")
+    fun postkakaoSignin(
+            @Body postKakaoGeneral : PostKakaoGeneral
+
+    ):retrofit2.Call<PostKakaoGeneralResponse>
 
     @POST("/users/signup/check/email")
     fun postEmailCheck(

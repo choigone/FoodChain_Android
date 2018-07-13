@@ -46,23 +46,23 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         page_setting_btn.setOnClickListener(this)
 
 
-            val builder = AlertDialog.Builder(this@HomeActivity)
+        val builder = AlertDialog.Builder(this@HomeActivity)
 
-            builder.setMessage("가입하고 우리 동네 상품을 찾아보세요! " +
-                    "우리 동네를 설정하고 시작하세요!")
-            builder.setPositiveButton("우리 동네 설정하고 시작하기") { dialog, which ->
-                setContentView(R.layout.activity_address)
+        builder.setMessage("가입하고 우리 동네 상품을 찾아보세요! " +
+                "우리 동네를 설정하고 시작하세요!")
+        builder.setPositiveButton("우리 동네 설정하고 시작하기") { dialog, which ->
+            setContentView(R.layout.activity_address)
 //            root_layout.setBackgroundColor(Color.TRANSPARENT)
-            }
+        }
 
-            builder.setNeutralButton("둘러보기") { dialog, which ->
-                setContentView(R.layout.activity_basket)
+        builder.setNeutralButton("둘러보기") { dialog, which ->
+            setContentView(R.layout.activity_basket)
 //            root_layout.setBackgroundColor(Color.TRANSPARENT)
-            }
+        }
 
-            val dialog: AlertDialog = builder.create()
+        val dialog: AlertDialog = builder.create()
 
-            dialog.show()
+        dialog.show()
 
 
 

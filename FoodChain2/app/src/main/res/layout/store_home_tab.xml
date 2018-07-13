@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="104dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+    //LinearLayoutManager
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_recommend_vp"
+        android:layout_width="match_parent"
+        android:layout_height="203dp">
+    </android.support.v4.view.ViewPager>
+
+    <RelativeLayout
+        android:id="@+id/homeMenu"
+        android:layout_width="match_parent"
+        android:layout_height="117dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/menu1"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/animal"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu2"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu3"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu4"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu5"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageButton
+                android:id="@+id/menu6"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu7"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu8"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+
+            <ImageButton
+                android:id="@+id/menu9"
+                android:layout_width="87dp"
+                android:layout_height="58dp"
+                android:src="@drawable/ex_icon1"
+                android:background="#ffffff"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/coupon"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/couponbanner_ex" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        //LinearLayoutManager
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

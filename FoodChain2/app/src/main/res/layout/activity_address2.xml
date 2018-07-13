@@ -18,12 +18,13 @@
             android:gravity="center"
             />
 
-        <FrameLayout
+        <fragment
             android:id="@+id/map_frame"
             android:layout_width="match_parent"
-            android:layout_height="360dp">
+            android:layout_height="360dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment">
 
-        </FrameLayout>
+        </fragment>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -40,6 +41,7 @@
                 android:layout_marginLeft="16dp"/>
             
             <TextView
+                android:id="@+id/address2_address"
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
                 android:layout_centerVertical="true"

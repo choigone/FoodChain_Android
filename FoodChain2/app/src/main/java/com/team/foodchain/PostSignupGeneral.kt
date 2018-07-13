@@ -1,7 +1,6 @@
 package com.team.foodchain
 
 data class PostSignupGeneral (
-    var user_pw_check : String,
     var user_pw : String,
     var user_name : String,
     var user_email : String,
