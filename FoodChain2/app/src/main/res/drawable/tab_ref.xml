@@ -5,6 +5,6 @@
         android:state_selected="true"
         />
     <item
-        android:drawable="@drawable/refri_x"
+        android:drawable="@drawable/refriger_icon_group"
         android:state_selected="false"/>
 </selector>
