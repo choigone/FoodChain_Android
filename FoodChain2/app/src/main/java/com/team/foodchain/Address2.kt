@@ -28,7 +28,7 @@ class Address2 : Fragment(), View.OnClickListener{
         recyclerView.layoutManager = LinearLayoutManager(this.context)
         addressItem = addressData
         addressAdapter = AddressAdapter(addressItem)
-        addressAdapter.setOnItemClick(this)
+//        addressAdapter.setOnItemClick(this)
         recyclerView.adapter = addressAdapter
         return v
     }

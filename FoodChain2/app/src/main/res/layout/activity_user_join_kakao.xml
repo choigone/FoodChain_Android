@@ -39,6 +39,7 @@
                 android:layout_height="30dp">
 
                 <EditText
+                    android:id="@+id/user_kakao_email"
                     android:layout_width="300dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"
@@ -69,6 +70,7 @@
                 android:layout_height="30dp">
 
                 <EditText
+                    android:id="@+id/user_kakao_phone"
                     android:layout_width="315dp"
                     android:layout_height="30dp"
                     android:background="@android:color/transparent"

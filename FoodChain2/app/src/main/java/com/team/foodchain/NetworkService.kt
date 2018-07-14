@@ -1,10 +1,7 @@
 package com.team.foodchain
 
 import okhttp3.Call
-import retrofit2.http.Body
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface NetworkService {
 
@@ -46,4 +43,6 @@ interface NetworkService {
             @Body postUserLocate: PostUserLocate
     ) : retrofit2.Call<PostUserLocateResponse>
 
+    @GET("/market/near")
+    fun getMarket(token: String) : retrofit2.Call<GetMarketNearResponse>
 }

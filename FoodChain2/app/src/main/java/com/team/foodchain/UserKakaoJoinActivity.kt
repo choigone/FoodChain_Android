@@ -31,7 +31,7 @@ class UserKakaoJoinActivity : AppCompatActivity() {
         var kakaoNickname :String = intent.getStringExtra("kakaoNickname")
 
         Log.e("Profile", kakaoID + kakaoNickname)
-        user_join_btn_.setOnClickListener{
+        user_join_btn.setOnClickListener{
             postUserSignup(kakaoID, kakaoNickname)
         }
     }

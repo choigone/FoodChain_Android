@@ -66,7 +66,7 @@ class AddressActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_address)
         addFragment(Address1())
-        networkService = ApplicationController.instance.networkSerVice
+        networkService = GlobalApplication.instance.networkSerVice
         lateinit var networkService2 : NetworkService2
         val builder = Retrofit.Builder()
         val retrofit = builder.baseUrl("http://www.juso.go.kr").addConverterFactory(GsonConverterFactory.create()).build()
