@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.frame_address2.*
 
 class AddressAdapter(var AddressItem : ArrayList<String>) : RecyclerView.Adapter<AddressViewHolder>() {
 
-    var resultAddress : String? = null
+
 
     private lateinit var onItemClick : View.OnClickListener
     fun setOnItemClick(l: Address2){
@@ -24,9 +24,9 @@ class AddressAdapter(var AddressItem : ArrayList<String>) : RecyclerView.Adapter
         val mainView : View = LayoutInflater.from(parent.context)
                 .inflate(R.layout.address_item, parent, false)
         mainView.setOnClickListener(onItemClick)
-        var addressActivity = AddressActivity()
-        var convertAddress : Address = addressActivity.run(resultAddress!!)
-        Log.e("안녕",convertAddress.latitude.toString() + convertAddress.longitude.toString())
+//        var addressActivity = AddressActivity()
+//        var convertAddress : Address = addressActivity.run(resultAddress!!)
+//        Log.e("안녕",convertAddress.latitude.toString() + convertAddress.longitude.toString())
 
         return AddressViewHolder(mainView)
     }
@@ -36,7 +36,7 @@ class AddressAdapter(var AddressItem : ArrayList<String>) : RecyclerView.Adapter
         holder.Address.text = AddressItem[position]
 
         holder.itemView.setOnClickListener{
-            resultAddress = AddressItem[position]
+            var resultAddress : String? = AddressItem[position]
             Log.e("클릭되라고!!!",AddressItem[position])
 
 

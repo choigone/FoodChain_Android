@@ -3,20 +3,22 @@
     package="com.team.foodchain">
 
     <permission android:name="com.team.foodchain.permission.MAPS_RECEIVE"
-                android:protectionLevel="signature"/>
+        android:protectionLevel="signature"/>
+
     <uses-permission android:name="com.team.foodchain.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.gsf.permission.READ_GSERVICE"/>
     <uses-feature android:name="android.hardware.camera2" android:required="true"/>
+
     <!--<uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>-->
 
     <application
-        android:name=".ApplicationController"
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -29,32 +31,38 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyBwysSNTDdHO68Vlu1k3iIYC3XJan3glJI" />
-        <activity android:name=".AddressActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".JoinActivity"></activity>
+
+
+        <activity android:name=".AddressActivity2"></activity>
+        <activity android:name=".AddressActivity"></activity>
+        <activity android:name=".MasterKakaoJoinActivity"></activity>
+        <activity android:name=".KakaoJoinActivity"></activity>
+        <activity android:name=".KakaoSignupActivity"></activity>
         <activity android:name=".UserJoinActivity"></activity>
+        <activity android:name=".UserKakaoJoinActivity"></activity>
+        <activity android:name=".JoinActivity"></activity>
         <activity android:name=".MasterJoinActivity"></activity>
         <activity android:name=".ChoiceActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
-        <!--<activity android:name=".AddressActivity"></activity>-->
-        <activity android:name=".AddressActivity2"></activity>
 
-        <!--<provider-->
-            <!--android:authorities="com.shuvic.alumni.cameraalbum"-->
-            <!--android:name="android.support.v4.content.FileProvider"-->
-            <!--android:exported="false"-->
-            <!--android:grantUriPermissions="true">-->
-            <!--<meta-data-->
-                <!--android:name="android.support.v4.content.FILE_PROVIDER_PATH"-->
-                <!--android:resource="@xml/file_paths"/>-->
 
-        <!--</provider>-->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="e5d45c6ed2928591a26eb710f20e3fab"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBwysSNTDdHO68Vlu1k3iIYC3XJan3glJI" />
+
     </application>
 
 </manifest>

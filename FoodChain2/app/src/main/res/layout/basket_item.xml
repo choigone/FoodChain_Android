@@ -1,168 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" 
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    
+    android:orientation="vertical"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="18dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="147dp">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="128dp">
-        
-        <ImageView
-            android:id="@+id/basket_item_checked_iv"
-            android:layout_width="24.2dp"
-            android:layout_height="24.2dp"
-            android:layout_marginLeft="15.3dp"/>
-
-        <ImageView
-            android:id="@+id/basket_item_iv"
-            android:layout_width="70.85dp"
-            android:layout_height="70.85dp"
-            android:layout_toRightOf="@+id/basket_item_checked_iv"
-            android:layout_marginLeft="10.3dp"
-            android:layout_marginTop="10.3dp"
-            />
-        
+        android:layout_height="16dp">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:textSize="14dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/storename"
+            android:textSize="12dp"
             android:textColor="#000000"
-            android:layout_toRightOf="@id/basket_item_iv"
-            android:layout_marginTop="10.3dp"
-            android:layout_marginLeft="17.23dp"
             />
-        
-        <RelativeLayout
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/middle_"
+        android:layout_alignBottom="@+id/storename"
+        android:layout_width="match_parent"
+        android:layout_marginTop="13.7dp"
+        android:layout_height="16dp">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="50dp"
-            >
-            
-            <TextView
-                android:id="@+id/basket_item_count_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="수량"
-                android:textSize="14dp"
-                android:textColor="#000000"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="금액"
-                android:textSize="14dp"
-                android:textColor="#000000"
-                android:layout_alignParentBottom="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:textSize="14dp"
-                android:textColor="#000000"
-                android:layout_toRightOf="@+id/basket_item_count_txt"
-                android:layout_marginLeft="15dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/checkcheck"
+                android:layout_width="9dp"
+                android:layout_height="wrap_content"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:textSize="14dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:layout_alignRight="@+id/checkcheck"
+                android:textSize="12dp"
                 android:textColor="#000000"
-                android:layout_marginRight="25dp"/>
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#707070"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
-        >
-
-        <TextView
-            android:id="@+id/basket_item_total_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="총 상품금액"
-            android:textSize="14dp"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="할인 금액"
-            android:textSize="14dp"
-            android:textColor="#000000"
-            android:layout_alignParentBottom="true"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:textSize="14dp"
-            android:textColor="#000000"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="25dp"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:textSize="14dp"
-            android:textColor="#000000"
-            android:layout_marginRight="25dp"/>
+                android:layout_marginLeft="6.25dp"
+                />
+        </LinearLayout>
 
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#707070"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"/>
-
     <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@+id/middle_"
         android:layout_width="match_parent"
-        android:layout_height="18dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="20dp"
-        >
+        android:layout_height="64dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginRight="12dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="옵션"
+                        />
+                    <TextView
+                        android:id="@+id/basket_opt_name"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="정가"
+                        />
+                    <TextView
+                        android:id="@+id/basket_original_price"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="할인금액"
+                        />
+                    <TextView
+                        android:id="@+id/basket_discount_price"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textStyle="bold"
+                        android:textSize="12dp"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주문금액"
+                        />
+                    <TextView
+                        android:id="@+id/basket_order_price"
+                        android:layout_marginLeft="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+            </LinearLayout>
 
 
+        </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="결제 금액"
-            android:textSize="14dp"
-            android:textColor="#000000"
-            android:layout_alignParentBottom="true"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:textSize="14dp"
-            android:textColor="#000000"
+        <LinearLayout
             android:layout_alignParentRight="true"
-            android:layout_marginRight="25dp"
-            />
+            android:layout_marginRight="86dp"
+            android:orientation="horizontal"
+            android:layout_width="24dp"
+            android:layout_height="24dp">
 
+        </LinearLayout>
     </RelativeLayout>
 
 </LinearLayout>

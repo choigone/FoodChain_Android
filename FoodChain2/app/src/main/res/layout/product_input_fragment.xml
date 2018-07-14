@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="84dp">
+
+    <ImageView
+        android:layout_width="328dp"
+        android:layout_height="170dp"
+        android:src="@drawable/picture"
+        android:layout_gravity="center"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+        <ImageView
+            android:id="@+id/seller_pic"
+            android:src="@drawable/seller_pic"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/storename"
+            android:text="준우랜드"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_toRightOf="@+id/seller_pic"/>
+
+        <TextView
+            android:text="30"
+            android:layout_toLeftOf="@+id/ondate"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_height="16dp"
+            android:textColor="#2E8B57"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/ondate"
+            android:text="일 남은 상품"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#2E8B57"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="28dp"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/productaddress"
+            android:text="서울특별시 강북구 삼양로"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="9dp"
+            android:textColor="#2E8B57"
+            android:textSize="12dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="43dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:text="상품명"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="케냐원두"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="원산지"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="188dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="원가"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="188dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="판매가"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="188dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상품설명"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:src="@drawable/look_button"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

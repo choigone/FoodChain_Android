@@ -44,12 +44,12 @@ import kotlin.collections.Map
 
 
 class AddressActivity : AppCompatActivity(){
+    lateinit var networkService: NetworkService
 
-    object addressActivity{
 
-    }
 
     var ssibal = arrayListOf("dd")
+
 
 
 
@@ -66,10 +66,12 @@ class AddressActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_address)
         addFragment(Address1())
+        networkService = GlobalApplication.instance.networkSerVice
         lateinit var networkService2 : NetworkService2
         val builder = Retrofit.Builder()
         val retrofit = builder.baseUrl("http://www.juso.go.kr").addConverterFactory(GsonConverterFactory.create()).build()
         networkService2 = retrofit.create((NetworkService2::class.java))
+        val token = intent.getStringExtra("token")
 
 //        keyword = findViewById(R.id.address_search_keyword) as EditText
 //        keyword.setImeActionLabel("검색", KeyEvent.KEYCODE_ENTER)
@@ -114,7 +116,14 @@ class AddressActivity : AppCompatActivity(){
 
             Log.e("text", "위도 : " + latitude + "경도 : " + longitude)
             Log.e("변환했음",address)
+
+
+
+            postUserLocation(latitudeD, longitudeD, address, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImxzbTAzNDF6ekBnbWFpbC5jb20iLCJwdyI6IkVaZno3aTl5M3R3QWY3SE1XSVF5cG82dmFuMEJOWkJnQk9rcGJJZ3ovblU9IiwiaWRlbnRpZnkiOjAsImlhdCI6MTUzMTQ3ODM3MH0.SCtkpHq5yRJ8rfuuQPTqa1Lp__SJDyhAwby-4DMxoIo")
+
+
         }
+
         searchIcon.setOnClickListener{
             val address_search_keyword =  address_search_keyword.text.toString()
             val map = HashMap<String, String>()
@@ -153,15 +162,15 @@ class AddressActivity : AppCompatActivity(){
         }
     }
 
-    fun run(address : String) : Address {
-        val geocoder = google.maps.geocoder()
-        val results = geocoder.getFromLocationName(address, 1)
-        val resultAddress = results.get(0)
-        val latLng = LatLng(resultAddress.getLatitude(), resultAddress.getLongitude())
-        return resultAddress
-
-
-    }
+//    fun run(address : String) : Address {
+//        val geocoder = Geocoder(this@AddressActivity)
+//        val results = geocoder.getFromLocationName(address, 1)
+//        val resultAddress = results.get(0)
+//        val latLng = LatLng(resultAddress.getLatitude(), resultAddress.getLongitude())
+//        return resultAddress
+//
+//
+//    }
 
     fun run(lat : Double, lon : Double) : String {
         val geocoder = Geocoder(this@AddressActivity)
@@ -201,6 +210,36 @@ class AddressActivity : AppCompatActivity(){
         transaction.replace(R.id.address_frame, fragment, tag)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    fun postUserLocation(lat: Double, lon: Double, add : String, token : String){
+
+        Log.e("하","1")
+
+        val postUserLocate = PostUserLocate(add, lat, lon)
+
+        val postUserLocateResponse = networkService.postLocate(token,postUserLocate)
+        postUserLocateResponse.enqueue(object : Callback<PostUserLocateResponse>{
+            override fun onFailure(call: Call<PostUserLocateResponse>?, t: Throwable?) {
+                Log.e("하","2")
+                Log.e("하",t.toString())
+
+
+            }
+
+            override fun onResponse(call: Call<PostUserLocateResponse>?, response: Response<PostUserLocateResponse>?) {
+                if(response!!.isSuccessful){
+                    Log.e("하","3")
+
+                    val intent = Intent(applicationContext, AddressActivity2::class.java)
+                    intent.putExtra("token", token)
+                    intent.putExtra("latitude",lat.toString())
+                    intent.putExtra("longitude",lon.toString())
+                    intent.putExtra("address",add)
+                    startActivity(intent)
+                }
+            }
+        })
     }
 
 }

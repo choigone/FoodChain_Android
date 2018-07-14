@@ -1,10 +1,7 @@
 package com.team.foodchain
 
 import okhttp3.Call
-import retrofit2.http.Body
-import retrofit2.http.Header
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface NetworkService {
 
@@ -13,10 +10,16 @@ interface NetworkService {
             @Body postSignupGeneral: PostSignupGeneral
     ) : retrofit2.Call<PostSignupGeneralResponse>
 
-    @POST("/users/signup/supplier")
-    fun postSignMaster(
-            @Body postSignupMaster: PostSignupMaster
-    ) : retrofit2.Call<PostSignupMasterResponse>
+    @POST("/users/signin/native")
+    fun postSignIn(
+            @Body postSigninGeneral : PostSigninGeneral
+    ):retrofit2.Call<PostSigninGeneralResponse>
+
+    @POST("/users/signin/kakao")
+    fun postkakaoSignin(
+            @Body postKakaoGeneral : PostKakaoGeneral
+
+    ):retrofit2.Call<PostKakaoGeneralResponse>
 
     @POST("/users/signup/check/email")
     fun postEmailCheck(
@@ -40,4 +43,6 @@ interface NetworkService {
             @Body postUserLocate: PostUserLocate
     ) : retrofit2.Call<PostUserLocateResponse>
 
+    @GET("/market/near")
+    fun getMarket(token: String) : retrofit2.Call<GetMarketNearResponse>
 }

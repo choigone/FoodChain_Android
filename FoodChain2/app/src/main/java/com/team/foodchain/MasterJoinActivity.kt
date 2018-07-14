@@ -24,7 +24,7 @@ class MasterJoinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_master_join)
-        networkService = ApplicationController.instance.networkSerVice
+        networkService = GlobalApplication.instance.networkSerVice
 
         pwText = findViewById(R.id.master_pw_et) as EditText
         pwCheckText = findViewById(R.id.master_pwcheck_et) as EditText
@@ -65,14 +65,14 @@ class MasterJoinActivity : AppCompatActivity() {
     }
 
     fun postMasterSignup(){
-        val user_pw_check =  user_join_pwcheck.text.toString()
+
         val user_pw = user_join_pw.text.toString()
         val user_name = user_join_name.text.toString()
         val user_email = user_join_email.text.toString()
         val user_phone = user_join_phone.text.toString()
         val user_id : String? = null
 
-        val postSignupGeneral = PostSignupGeneral(user_pw_check, user_pw, user_name, user_email, user_phone, user_id)
+        val postSignupGeneral = PostSignupGeneral(user_pw, user_name, user_email, user_phone, user_id)
 
         val postSignupGeneralResponse = networkService.postSignGeneral(postSignupGeneral)
         postSignupGeneralResponse.enqueue(object : Callback<PostSignupGeneralResponse> {

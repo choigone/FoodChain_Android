@@ -4,16 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <RelativeLayout
+        android:layout_marginTop="18dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="70.8dp"
-            android:text="FOOD CHAIN"
-            android:textColor="#707070"
-            android:textSize="38sp" />
+            android:src="@drawable/iconimg"
+            android:layout_width = "125dp"
+            android:layout_height= "125dp"
+            />
     </RelativeLayout>
 
     <LinearLayout
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="27dp"
         android:layout_gravity="center_horizontal"
         >
 
@@ -29,6 +29,8 @@
             android:layout_width="314dp"
             android:layout_height="24dp"
             >
+
+
             <EditText
                 android:id="@+id/login_id"
                 android:hint="이메일 또는 전화번호"
@@ -59,7 +61,7 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="43.2dp">
+        android:layout_marginTop="50dp">
 
         <RelativeLayout
             android:layout_width="314dp"
@@ -78,12 +80,12 @@
                 android:textColor="#2E8B57"
                 android:textSize="13sp" />
 
-                <ImageView
-                    android:id="@+id/login_eye_btn"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/tab_eye"/>
+            <ImageView
+                android:id="@+id/login_eye_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/tab_eye"/>
         </RelativeLayout>
 
     </LinearLayout>
@@ -104,8 +106,8 @@
         android:layout_height="wrap_content">
         <ImageButton
             android:id="@+id/login_login_btn"
-            android:layout_width="251dp"
-            android:layout_height="38dp"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/login_btn"
             />
@@ -117,12 +119,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <!--<ImageView-->
+                <!--android:id="@+id/kak"-->
+                <!--android:layout_width="251dp"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:src="@drawable/kakao"-->
+                <!--/> -->
+        <com.kakao.usermgmt.LoginButton
             android:id="@+id/login_kakao"
-            android:layout_width="251dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/kakao" />
+            />
     </RelativeLayout>
 
     <RelativeLayout
