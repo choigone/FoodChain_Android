@@ -10,4 +10,4 @@
   3. 유통기한 관리
      + 상품의 이미지를 인식하여 카테고리 분류와 상품명 자동 입력 후 유통기한 관리 기능
 
-[EATDA.pdf](https://github.com/choigone/22th-SOPT-1/files/2935591/EATDA.pdf)
+<img width="502" alt="eatda" src="https://user-images.githubusercontent.com/40175383/53873795-6c462180-4044-11e9-9c2a-361c5f7e15d7.png">
